@@ -1,118 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-
-  <title>Fertility Landing - Gloss Design System</title>
-
-  <link href="https://utahhealthcare.github.io/gloss-docs/gloss-source/dist/css/gloss.min.css?1586903806" rel="stylesheet">
-
-  <script>
-    var baseURL = "https:\/\/utahhealthcare.github.io\/gloss-docs\/";
-  </script>
-  <script src="https://utahhealthcare.github.io/gloss-docs/gloss-source/dist/js/gloss.min.js?1586903806"></script>
-  <script src="https://utahhealthcare.github.io/gloss-docs/gloss-source/dist/js/gloss-icons.min.js?1586903806"></script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-  <script>
-    Chart.defaults.global.defaultFontColor = getComputedStyle(document.documentElement).getPropertyValue('--global-color');
-    Chart.defaults.global.defaultFontFamily = getComputedStyle(document.documentElement).getPropertyValue('--global-font-family');
-
-  </script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"></script>
-  <script>
-    window.addEventListener("load", function (event) {
-      const players = Array.from(document.querySelectorAll('.gls-player')).map(p => new Plyr(p));
-    }, false);
-  </script>
-
-</head>
-
-<body>
-
-  <div class="gls-offcanvas-content">
-
-
-    <!-- BILLBOARD -->
-    <div class="gls-section-default">
-
-      <img src="https://utahhealthcare.github.io/gloss-docs/images/patterns/billboard1.jpg" alt="placeholder" class="gls-hidden@m">
-
-      <div class="gls-section gls-background-norepeat gls-background-cover gls-background-center-center gls-background-image@m" style="background-image: url(https://utahhealthcare.github.io/gloss-docs/images/patterns/billboard1.jpg)">
-
-        <div class="gls-container">
-
-          <div gls-grid="" class="gls-grid-large gls-flex-middle gls-grid">
-
-            <div class="gls-width-3-5@m gls-text-center gls-text-left@m">
-
-              <div class="gls-hidden@m">
-                <ul class="gls-breadcrumb gls-breadcrumb-secondary gls-flex-inline">
-                  <li>
-                    <a href class="gls-flex gls-flex-middle">
-                      <span gls-icon="icon: arrow-left; ratio: 0.5" class="gls-margin-xsmall-right"></span>
-                      Health Care Home
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="gls-visible@m">
-                <ul class="gls-breadcrumb gls-breadcrumb-secondary gls-flex-inline">
-                  <li><a href>Health Care Home</a></li>
-                </ul>
-              </div>
-
-              <h1 class="gls-heading gls-heading-medium gls-text-medium gls-text-wide gls-text-uppercase gls-margin-remove-top">
-                Clinical Service Landing Page</h1>
-
-              <p class="gls-text-large gls-margin-small-bottom gls-text-light">Call <span class="gls-text-semibold gls-text-primary">555-555-5555</span> or</p>
-
-              <a href class="gls-button gls-button-primary gls-button-large gls-text-uppercase gls-text-widest gls-padding-small-left gls-padding-small-right">
-                Request an Appointment
-                <span gls-icon="icon: chevron-right; ratio: 0.65"></span>
-              </a>
-
-              <p>
-                <a href class="gls-button gls-button-link gls-text-small">
-                  <span class="gls-margin-xsmall-right" gls-icon="icon: doctor; ratio: 0.7"></span>
-                  Refer a Patient
-                  <span class="" gls-icon="icon: chevron-right; ratio: 0.5"></span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div id="main-content">
-      <!-- FAD -->
-      <div class="gls-section gls-section-muted gls-section-small" id="section5">
-        <div class="gls-container gls-container-small">
-          <h2 class="gls-text-primary gls-text-uppercase gls-text-center">Find a Specialist</h2>
-
-          <!-- ** PLEASE ERASE TEST DATA NUMBERS FOR PRODUCTION ** -->
-          <!-- FST APP => Attributes to include(Specialty ID's) or exclude(UNIDS). -->
-          <!-- <app-fst buildings="" specialties="SPEC024207,SPEC02420,SPEC000071" included="u6001153,u0851858,u0000000" excluded="" by-name="true" by-location="true" by-specialty="true"></app-fst> -->
-
-          <!-- <app-fst buildings="" specialties="SPEC000129" included="" excluded="" by-name="" by-location=""></app-fst> -->
-          <div id="app-fst" class></div>
-
-          <!-- ** PLEASE ERASE TEST DATA NUMBERS FOR PRODUCTION ** -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react-locations</title>
+  </head>
+  <body>
+    <div id="app-fst"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

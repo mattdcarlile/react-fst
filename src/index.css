@@ -1,1 +1,201 @@
 @import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-BoldItalic.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-BoldItalic.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-BoldItalic.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-BoldItalic.svg#SofiaPro-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaProExtraLight.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaProExtraLight.woff') format('woff'),
+    url('../src/assets/fonts/SofiaProExtraLight.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaProExtraLight.svg#SofiaProExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-Bold.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-Bold.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-Bold.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-Bold.svg#SofiaPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-Light.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-Light.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-Light.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-Light.svg#SofiaPro-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-Regular.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-Regular.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-Regular.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-Regular.svg#SofiaPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-Medium.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-Medium.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-Medium.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-Medium.svg#SofiaPro-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-RegularItalic.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-RegularItalic.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-RegularItalic.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-RegularItalic.svg#SofiaPro-RegularItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-LightItalic.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-LightItalic.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-LightItalic.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-LightItalic.svg#SofiaPro-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-MediumItalic.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-MediumItalic.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-MediumItalic.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-MediumItalic.svg#SofiaPro-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaProUltraLight.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaProUltraLight.woff') format('woff'),
+    url('../src/assets/fonts/SofiaProUltraLight.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaProUltraLight.svg#SofiaProUltraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-SemiBold.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-SemiBold.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-SemiBold.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-SemiBold.svg#SofiaPro-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../src/assets/fonts/SofiaPro-SemiBoldItalic.woff2') format('woff2'),
+    url('../src/assets/fonts/SofiaPro-SemiBoldItalic.woff') format('woff'),
+    url('../src/assets/fonts/SofiaPro-SemiBoldItalic.ttf') format('truetype'),
+    url('../src/assets/fonts/SofiaPro-SemiBoldItalic.svg#SofiaPro-SemiBoldItalic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+.tab-not-active {
+
+}
+
+.tab-active-unselected {
+  clip-path: path('M Z')
+}
+
+.tab-active-selected {
+  clip-path: path('M Z')
+}
+
+
+
+
+@layer base {
+
+  *,
+  :after,
+  :before,
+  ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sofia);
+    background-color: var(--color-white);
+    color: var(--color-blackk);
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* overflow-x: hidden; */
+  }
+
+  h2 {
+    @apply text-redd text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-medium;
+  }
+
+}
+
+@theme {
+  --color-redd: #a6192e;
+  --color-redd-sec: #C31D36;
+  --color-blackk: #111111;
+
+  /* FONTS */
+  --font-sofia: 'Sofia Pro', sans-serif;
+}
+
+@layer components {
+
+}
