@@ -190,35 +190,53 @@
   }
 
   .tab-fst {
-    @apply flex flex-col w-1/2 text-center items-center text-2xl bg-blackk border-1 border-gray-400 cursor-pointer hover:border-gray-800;
-
-    &:nth-of-type(1) {
-      @apply rounded-bl-md rounded-tl-md;
-    }
-
-    &:nth-of-type(2) {
-      @apply border-l-0 rounded-br-md rounded-tr-md;
-    }
+    @apply flex flex-col w-1/2 text-center items-center bg-white text-2xl border-1 border-gray-400 cursor-pointer hover:text-redd;
 
     svg {
       @apply text-gray-400;
     }
+
+    &:hover svg {
+      @apply stroke-redd;
+    }
   }
 
-  .tab-not-active {
+  #by-name {
+    @apply rounded-bl-md rounded-tl-md;
+  }
+
+  #by-location {
+    @apply border-l-0 rounded-br-md rounded-tr-md;
+  }
+
+  .tab-not-active#by-name,
+  .tab-not-active#by-location {
+    @apply bg-gray-100 p-10 rounded-br-none rounded-bl-none;
+  }
+
+  .tab-active#by-location,
+  .tab-active#by-name {
+    @apply p-10 border-b-white text-redd rounded-br-none rounded-bl-none rounded-tr-md rounded-tl-md;
+
+    svg {
+      @apply stroke-redd;
+    }
+  }
+
+
+  #by-location.tab-not-active {
+    @apply rounded-b-none;
+  }
+
+  .tab-clear {
     @apply bg-white p-10;
   }
-
-  .tab-active-unselected {
-    clip-path: path('M  Z')
-  }
-
-  .tab-active-selected {}
 
   .doctor-results {
     @apply overflow-hidden text-lg text-center before:right-full before:mr-3 before:absolute before:top-2 before:w-[2000px] before:border-b-gray-100;
   }
-/*  before:content-none   */
+
+  /*  before:content-none   */
   .fst-cards {
     @apply flex flex-col relative border-1 border-gray-300 rounded-md px-5 pt-10 pb-5 hover:shadow-md hover:shadow-gray-300 hover:border-gray-400 hover:-top-0.25 transition ease-in-out;
   }

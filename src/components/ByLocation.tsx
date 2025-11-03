@@ -14,7 +14,7 @@ function ByLocation() {
   }
 
   return (
-    <div>
+    <div className="bg-white flex flex-col p-10 rounded-b-md border-1 border-gray-400 border-t-0">
       <div>
         <div className="w-1/3">
 <ul>
