@@ -9,7 +9,7 @@ function App() {
       <NavBar />
       <PageHeader />
       <div className='relative flex justify-center bg-gray-100'>
-        <div className="relative flex flex-col w-full max-w-[1200px] px-8 lg:px-0">
+        <div className="relative flex flex-col w-full max-w-[1200px] px-8 xl:px-0">
           <FST/>
         </div>
       </div>
