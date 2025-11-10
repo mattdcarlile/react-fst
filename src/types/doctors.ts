@@ -2,7 +2,7 @@ export interface Doctor {
   preferredFullName?: string | null;
   firstName?: string | null;
   lastName?: string | null;
-  unid?: string | null;
+  unid: string;
   degrees?: string | null;
   starRatingTotal?: string | null;
   media?: string | null;
@@ -30,5 +30,5 @@ export interface Doctor {
     issuer?: string | null;
     years?: string | null;
   }[];
-  path?: string | null;
+  path: string;
 }

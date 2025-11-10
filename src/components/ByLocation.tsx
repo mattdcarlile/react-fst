@@ -6,7 +6,7 @@ function ByLocation() {
   const [searchDocName, setSearchDocName] = useState('');
   const movie = {
     title: "Inception",
-    rating: 4.5
+    rating: '4.5'
   };
 
   const inputSpecSearch = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -86,7 +86,7 @@ function ByLocation() {
             <div className="card-name">
               Klitos Konstantinidis, <span className='card-degree'>MD</span>
             </div>
-            <div className="card-rating">
+            <div className="card-rating grow">
               <RatingStars rating={movie.rating} />
             </div>
             <div className="card-specialty">Cardiology</div>
