@@ -1,7 +1,8 @@
 import { useMemo, useState, type ChangeEvent } from "react";
-import RatingStars from "./RatingStars";
 import type { Doctor } from "../types/doctors";
-import SkeletonCards from "./SkeletonCards";
+import SkeletonCards from "./cards/SkeletonCards";
+import DoctorCards from "./cards/DoctorCards";
+
 
 interface ByNameProps {
   doctors: Doctor[];
@@ -61,6 +62,7 @@ function ByName({ doctors }: ByNameProps) {
   const handleClearFilter = () => {
     setFilterLetter(null);
     setVisibleCount(24);
+    setSearchDocName('');
   };
 
   const handleLoadMore = () => {
@@ -78,25 +80,34 @@ function ByName({ doctors }: ByNameProps) {
         <input className='input-filter w-full p-4 pl-13 rounded-md border border-gray-400 placeholder:text-gray-600 focus:outline-redd' type='text' placeholder='Search By Name' value={searchDocName} onChange={inputSpecSearch} />
 
       </div>
-      <div className="flex w-full mt-10 justify-center">
+      <div className="flex flex-col w-full mt-10 justify-center">
         <div className="flex flex-wrap justify-center items-center gap-2">
-          <button onClick={handleClearFilter} className="uppercase px-6 py-2 cursor-pointer rounded-md border border-gray-400 text-center hover:font-medium hover:border-redd hover:bg-redd hover:text-white">
-            View All
-          </button>
           {AZ.map((letter) => {
             const isAvailable = availableLetters.has(letter);
             const isActive = filterLetter === letter;
 
             return (
-            <span onClick={() => isAvailable && handleFilter(letter)} key={letter} className={`text-xl ${ isActive ? 'bg-redd text-white font-semibold cursor-pointer px-1' : isAvailable ? 'text-redd hover:text-red-600 underline hover:no-underline cursor-pointer' : 'text-gray-400 cursor-not-allowed no-underline'}`}>
-              {letter}
-            </span>
+              <span onClick={() => isAvailable && handleFilter(letter)} key={letter} className={`text-xl ${isActive ? 'bg-redd text-white font-semibold cursor-pointer px-1' : isAvailable ? 'text-redd hover:text-red-600 underline hover:no-underline cursor-pointer' : 'text-gray-400 cursor-not-allowed no-underline'}`}>
+                {letter}
+              </span>
             )
           })}
         </div>
+
+
+      {(filterLetter || searchDocName) ?
+        <div className="flex w-full justify-center mt-6">
+          <button onClick={handleClearFilter} className="uppercase px-6 py-2 cursor-pointer rounded-md border border-gray-400 text-center hover:font-medium hover:border-redd hover:bg-redd hover:text-white">
+            Reset All
+          </button>
+        </div>
+        : ''}
+
+
       </div>
 
-      {/* DOCTOR CARDS */}
+
+
       <div>
         <div className="flex items-center justify-center my-8">
           <span className="text-lg flex items-center w-full text-redd">
@@ -106,28 +117,10 @@ function ByName({ doctors }: ByNameProps) {
           </span>
         </div>
 
-        <div className='fst-docs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8'>
-
           {!doctors ? <SkeletonCards /> : (
-            visibleDoctors.map((doc, index) => (
-              <div key={index} className="fst-cards">
-                <div className={`bg-gray-200 aspect-3/4 ${doc.media ? 'card-img' : 'no-card-img'}`} style={{ backgroundImage: doc.media ? `url('${doc.media}')` : `url(${'./images/person-placeholder.png'})`}}>
-                </div>
-                <div className="card-name">
-                  {doc.preferredFullName}, <span className='card-degree'>{doc.degrees}</span>
-                </div>
-                <div className="card-rating grow">
-                  <RatingStars rating={doc.starRatingTotal} />
-                </div>
-                <div className="card-specialty">Cardiology</div>
-                <div className='card-link'>
-                  <a className='card-button' target="_blank" href={`https://healthcare.utah.edu${doc.path}`}>View Profile</a>
-                </div>
-              </div>
-            ))
-
+            <DoctorCards filteredDocs={visibleDoctors} />
           )}
-        </div>
+
         {visibleCount < filteredDoctors.length && (
           <button className="load-more mt-8" onClick={handleLoadMore}>
             Load More

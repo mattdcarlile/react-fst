@@ -1,5 +1,5 @@
-import PageHeader from './components/PageHeader'
-import NavBar from './components/NavBar'
+import PageHeader from './components/base/PageHeader'
+import NavBar from './components/base/NavBar'
 import FST from './components/FST'
 
 function App() {

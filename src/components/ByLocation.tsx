@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent } from "react";
-import RatingStars from "./RatingStars";
+import RatingStars from "./cards/RatingStars";
 import type { Doctor } from "../types/doctors";
 
 interface ByNameProps {
