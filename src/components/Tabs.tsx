@@ -17,12 +17,12 @@ const fetchDoctors = async (): Promise<Doctor[]> => {
   return doctorsData;
 };
 
-function FST() {
+function Tabs() {
 
   const [fstHidden, setFstHidden] = useState(false);
   const [activeTab, setActiveTab] = useState('');
 
-  const { data: doctors, isLoading, isError, error } = useQuery<Doctor[], Error>({
+  const { data: doctors = [], isLoading, isError, error } = useQuery<Doctor[], Error>({
     queryKey: ["doctors"],
     queryFn: fetchDoctors,
     staleTime: Infinity,
@@ -67,7 +67,7 @@ function FST() {
           {fstHidden && (
             <>
               {activeTab === 'by-name' && <ByName doctors={doctors} />}
-              {activeTab === 'by-location' && <ByLocation />}
+              {activeTab === 'by-location' && <ByLocation doctors={doctors} />}
             </>
           )}
         </div>
@@ -76,4 +76,4 @@ function FST() {
   )
 }
 
-export default FST
+export default Tabs

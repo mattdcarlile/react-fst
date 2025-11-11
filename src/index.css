@@ -267,4 +267,8 @@
     @apply w-full text-center block cursor-pointer bg-white rounded-md text-redd border border-redd p-3 hover:font-medium hover:bg-redd hover:text-white;
   }
 
+  .load-more {
+    @apply mt-8 font-semibold hover:font-semibold bg-gray-100;
+  }
+
 }
