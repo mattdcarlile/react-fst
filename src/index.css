@@ -242,7 +242,7 @@
   }
 
   .card-img {
-    @apply w-full bg-gray-200 aspect-3/4 bg-cover rounded-md max-w-3/4 self-center;
+    @apply w-full bg-gray-200 aspect-3/4 bg-cover rounded-md max-w-3/4 self-center bg-center;
 
   }
 
@@ -262,7 +262,8 @@
     @apply w-full mt-6 self-end;
   }
 
-  .card-button {
+  .card-button,
+  .load-more  {
     @apply w-full text-center block cursor-pointer bg-white rounded-md text-redd border border-redd p-3 hover:font-medium hover:bg-redd hover:text-white;
   }
 

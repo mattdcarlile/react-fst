@@ -1,7 +1,7 @@
 export interface Doctor {
   preferredFullName?: string | null;
   firstName?: string | null;
-  lastName?: string | null;
+  lastName?: string;
   unid: string;
   degrees?: string | null;
   starRatingTotal?: string | null;

@@ -6,12 +6,30 @@ import type { Doctor } from "../types/doctors";
 import { useQuery } from "@tanstack/react-query";
 
 
+// Production API Call
+// const fetchDoctors = async (): Promise<Doctor[]> => {
+//   const res = await fetch("/api/doctors.json");
+//   return res.json();
+// };
+
+// Example API Placeholder
+const fetchDoctors = async (): Promise<Doctor[]> => {
+  return doctorsData;
+};
+
 function FST() {
 
   const [fstHidden, setFstHidden] = useState(false);
   const [activeTab, setActiveTab] = useState('');
 
-
+  const { data: doctors, isLoading, isError, error } = useQuery<Doctor[], Error>({
+    queryKey: ["doctors"],
+    queryFn: fetchDoctors,
+    staleTime: Infinity,
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+  });
 
   const handleTabDisplay = (tab: string) => {
     setFstHidden(true);
@@ -23,21 +41,6 @@ function FST() {
       setActiveTab(tab);
     }
   };
-
-
-
-  const { data: doctors } = useQuery<Doctor[], Error>({
-    queryKey: ['doctors'],
-    queryFn: async () => doctorsData,
-    staleTime: Infinity,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
-    refetchOnReconnect: false,
-  });
-
-
-
-
 
 
   return (

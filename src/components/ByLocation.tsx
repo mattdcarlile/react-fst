@@ -1,13 +1,16 @@
 import { useState, type ChangeEvent } from "react";
 import RatingStars from "./RatingStars";
+import type { Doctor } from "../types/doctors";
 
-function ByLocation() {
+interface ByNameProps {
+  doctors?: Doctor[];
+}
+
+
+function ByLocation({ doctors }: ByNameProps) {
 
   const [searchDocName, setSearchDocName] = useState('');
-  const movie = {
-    title: "Inception",
-    rating: '4.5'
-  };
+
 
   const inputSpecSearch = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearchDocName(event.target.value);
@@ -17,9 +20,9 @@ function ByLocation() {
     <div className="bg-white flex flex-col p-10 rounded-b-md border-1 border-gray-400 border-t-0">
       <div>
         <div className="w-1/3">
-<ul>
-  <li></li>
-</ul>
+          <ul>
+            <li></li>
+          </ul>
         </div>
         <div className="w-2/3">
 
@@ -87,7 +90,7 @@ function ByLocation() {
               Klitos Konstantinidis, <span className='card-degree'>MD</span>
             </div>
             <div className="card-rating grow">
-              <RatingStars rating={movie.rating} />
+              // <RatingStars rating={movie.rating} />
             </div>
             <div className="card-specialty">Cardiology</div>
             <div className='card-link'>
