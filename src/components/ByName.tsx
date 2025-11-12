@@ -123,7 +123,7 @@ function ByName({ doctors }: ByNameProps) {
 
         {visibleCount < filteredDoctors.length && (
           <button className="load-more" onClick={handleLoadMore}>
-            Load More
+            Load More Doctors
           </button>
         )}
       </div>

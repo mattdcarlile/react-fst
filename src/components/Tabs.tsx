@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ByLocation from "./ByLocation"
+import ByLocation from "./locations/ByLocation";
 import ByName from "./ByName"
 import doctorsData from '../data/doctors.json'
 import type { Doctor } from "../types/doctors";

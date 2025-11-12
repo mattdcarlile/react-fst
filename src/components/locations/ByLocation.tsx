@@ -1,7 +1,7 @@
 import { useState, type ChangeEvent } from "react";
-import type { Doctor } from "../types/doctors";
-import DoctorCards from "./cards/DoctorCards";
-import SkeletonCards from "./cards/SkeletonCards";
+import type { Doctor } from "../../types/doctors";
+import DoctorCards from "../cards/DoctorCards";
+import SkeletonCards from "../cards/SkeletonCards";
 
 
 interface ByLocationProps {
